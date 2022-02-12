@@ -1,16 +1,11 @@
-import collections;
-
+#Aim: The output order should correspond with the input order of appearance of the word.
+from collections import Counter
 N = int(input())
-d = collections.OrderedDict()
-
+LIST = []
 for i in range(N):
-    word = input()
-    if word in d:
-        d[word] +=1
-    else:
-        d[word] = 1
-
-print(len(d));
-
-for k,v in d.items():
-    print(v,end = " ");
+    LIST.append(input().strip())
+COUNT = Counter(LIST)
+print(len(COUNT))
+print(*COUNT.values())
+# D21CE167
+# Manan Kathrecha
